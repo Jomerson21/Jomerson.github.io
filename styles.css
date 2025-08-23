@@ -321,7 +321,14 @@ body {
     border-radius: 50%;
     display: block;
 }
+.profile-img img {
+    transition: opacity 0.3s ease-in-out; /* smooth fade */
+}
 
+/* When hovering, switch image */
+.profile-img img:hover {
+    content: url("Assets/Images/Jom2.png"); /* replace with your second image */
+}
 .tech-stack {
     text-align: center;
 }
@@ -502,6 +509,9 @@ section {
 .project-image {
     height: 200px;
     background: var(--secondary-bg);
+    background-size: contain;   /* Show full image */
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image */
     position: relative;
     display: flex;
     align-items: center;
@@ -930,9 +940,11 @@ section {
 }
 
 .service-image {
-    height: 180px;
-    background-size: cover;
-    background-position: center;
+    height: 200px;
+    width: 100%;
+    background-size: contain;   /* Show full image */
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image */
 }
 
 .service-content { padding: 1.25rem; }
